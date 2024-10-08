@@ -1,12 +1,19 @@
-import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Producto } from '../../productos/producto';
+import { Component, OnInit } from '@angular/core';
 import { ProductosService } from '../../services/productos.service';
+import { Producto } from '../../productos/producto';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';   
+import { MatTableModule } from '@angular/material/table';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-editar-producto',
   standalone: true,
-  imports: [],
+  imports: [MatFormFieldModule, MatIconModule, MatTableModule, FormsModule, RouterModule, MatInputModule, CommonModule], 
   templateUrl: './editar-producto.component.html',
   styleUrl: './editar-producto.component.css'
 })
